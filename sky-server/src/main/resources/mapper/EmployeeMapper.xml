@@ -11,4 +11,13 @@
         </where>
         order by create_time desc
     </select>
+    <!-- 后面这个可以补充复用，好像还要!=''，因为String包含空串 -->
+    <update id="update" parameterType="Employee">
+        update employee
+        <set>
+            <if test="name != null">name = #{name},</if>
+            <if test="status !=null">status = #{status}</if>
+        </set>
+        where id = #{id}
+    </update>
 </mapper>
