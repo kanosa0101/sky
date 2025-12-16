@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
 @EnableTransactionManagement //开启注解方式的事务管理
+@EnableScheduling //开启定时任务注解
 @Slf4j
 @EnableCaching // 开启缓存注解
 public class SkyApplication {
